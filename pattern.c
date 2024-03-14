@@ -25,7 +25,6 @@ int yi(int *x, int *y) {
 void pattern(int count, int x, int y)
 {
     int *res=malloc(sizeof(int));
-    int prev = 2;
     while (1)
     {
 back:
@@ -35,7 +34,6 @@ back:
             *res = yi(&x,&y);
         }
         printf("%d \n", *res);
-        prev = *res;
     }
 }
 
