@@ -41,7 +41,7 @@ void pattern(int count, int x, int y)
 
 int main(int argc, char **argv)
 {
-  f=fopen("./pat", "wb");
+  f=fopen("./pattern", "wb");
   f=fopen("./test", "wb");
   pattern((int)**argv,(int)**argv+sizeof(int),(int)**argv+sizeof(int)*2);
   return 0;
