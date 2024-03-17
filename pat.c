@@ -10,7 +10,7 @@
 
 #define int uinttest_t
 typedef atomic_int int;
-FILE *f;
+FILE *f,*f2;
 static unsigned char rgb[HEIGHT_WIDTH][HEIGHT_WIDTH];
 struct timespec req,rem;
 void pattern(int count, int x, int y)
@@ -25,22 +25,28 @@ void pattern(int count, int x, int y)
     {
         x++;
         y--;
-        fprintf(f,"%c%c",x+y);
+        fprintf(f,"%c%c",x,y);
+        fprintf(f2,"%c%c",y,x);
     } else if (x>y) {
         y++;
         x--;
-        fprintf(f,"%c%c",y+x);
+        fprintf(f,"%c%c",y,x);
+        fprintf(f2,"%c%c",x,y);
     } else if(x==y) {
         y++;
         x--;
-        fprintf(f,"%c%c",x+y);
+        fprintf(f,"%c%c",x,y);
+        fprintf(f2,"%c%c",y,x);
     }
 }
 
 int main(int argc, char **argv)
 {
-  f=fopen("./pattern", "w");
-  pattern(0,1,0);
+  while(1) {
+    f=fopen("./pattern", "w");
+    f2=fopen("./pattern.txt", "w");
+    pattern(1,0,1);
+    fclose(f);
+  }
   return 0;
-  fclose(f);
 }
