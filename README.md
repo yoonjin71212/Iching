@@ -1,1 +1,1 @@
--1 is NOT a prime number.
+This is simulation based on I Ching.
