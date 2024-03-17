@@ -23,18 +23,19 @@ void pattern(int count, int x, int y)
     }
     while (1)
     {
-        if (x<y)
+        if (x>y)
         {
             x++;
             y--;
-            fprintf(f,"%d %d",x,y);
-        } else if (x>y) {
+            fprintf(f,"%c%c",x+y);
+        } else if (x<y) {
             y++;
-            x++;
-            fprintf(f,"%d %d",y,x);
+            x--;
+            fprintf(f,"%c%c",y+x);
         } else if(x==y) {
             y++;
-            fprintf(f,"%d %d",y,x);
+	    x--;
+            fprintf(f,"%c%c",x+y);
         }
     }
 }
@@ -43,7 +44,7 @@ int main(int argc, char **argv)
 {
   f=fopen("./pat", "wb");
   f=fopen("./test", "wb");
-  pattern((int)**argv,(int)**argv+sizeof(int),(int)**argv+sizeof(int)*2);
+  pattern(0,1,0);
   return 0;
   fclose(f);
 }
