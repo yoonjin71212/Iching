@@ -1,3 +1,3 @@
-gcc -o pat pat.c -O0
-gcc -o pattern pattern.c -O0
+gcc -o pat pat.c -O3
+gcc -o pattern pattern.c -O3
 ./pat;./pattern
