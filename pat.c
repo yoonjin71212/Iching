@@ -21,29 +21,25 @@ void pattern(int count, int x, int y)
     if(x==-10000000||y==-10000000) {
         return;
     }
-    while (1)
+    if (x<y)
     {
-        if (x<y)
-        {
-            x++;
-            y--;
-            fprintf(f,"%c%c",x+y);
-        } else if (x>y) {
-            y++;
-            x--;
-            fprintf(f,"%c%c",y+x);
-        } else if(x==y) {
-            y++;
-	    x--;
-            fprintf(f,"%c%c",x+y);
-        }
+        x++;
+        y--;
+        fprintf(f,"%c%c",x+y);
+    } else if (x>y) {
+        y++;
+        x--;
+        fprintf(f,"%c%c",y+x);
+    } else if(x==y) {
+        y++;
+        x--;
+        fprintf(f,"%c%c",x+y);
     }
 }
 
 int main(int argc, char **argv)
 {
-  f=fopen("./pat", "wb");
-  f=fopen("./test", "wb");
+  f=fopen("./pattern", "w");
   pattern(0,1,0);
   return 0;
   fclose(f);
