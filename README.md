@@ -1,1 +1,1 @@
-This is simulation based on I Ching.
+This is simulation that is based on I Ching.
