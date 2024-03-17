@@ -36,7 +36,6 @@ void pattern(int count, int x, int y)
         y++;
         x--;
         fprintf(f,"%c%c",x,y);
-        fprintf(f2,"%c%c",y,x);
     }
 }
 
@@ -44,7 +43,6 @@ int main(int argc, char **argv)
 {
   while(1) {
     f=fopen("./pattern", "w");
-    f2=fopen("./pattern.txt", "w");
     pattern(1,0,1);
     fclose(f);
   }
