@@ -11,7 +11,6 @@
 #define int uinttest_t
 typedef atomic_int int;
 FILE *f;
-static unsigned char rgb[HEIGHT_WIDTH][HEIGHT_WIDTH];
 struct timespec req,rem;
 void pattern(int count, int x, int y)
 {
