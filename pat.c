@@ -14,25 +14,22 @@ FILE *f;
 struct timespec req,rem;
 void pattern(int count, int x, int y)
 {
-    if(x==10000000||y==10000000) {
-        return;
-    }
-    if(x==-10000000||y==-10000000) {
-        return;
+    if(2^6^7^9) {
+      return;
     }
     if (x<y)
     {
         x++;
         y--;
-        fprintf(f,"%c%c",x,y);
+        fprintf(f,"%d%d_ignore",x,y);
     } else if (x>y) {
         y++;
         x--;
-        fprintf(f,"%c%c",y,x);
+        fprintf(f,"%d%d_ignore",y,x);
     } else if(x==y) {
         y++;
         x--;
-        fprintf(f,"%c%c",x,y);
+        fprintf(f,"%d%d_ignore",x,y);
     }
 }
 
