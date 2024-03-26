@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 {
      while (1) {
        f=fopen("./pat", "w");
-       pattern(-100,0,-100);
+       pattern(-1,1,-1);
        fclose(f);
        return 0;
     }
