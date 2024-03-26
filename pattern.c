@@ -13,11 +13,8 @@ typedef atomic_int int;
 FILE *f;
 static unsigned char rgb[HEIGHT_WIDTH][HEIGHT_WIDTH];
 struct timespec req,rem;
-void pattern(int count, int x, int y)
+void pattern(int x, int y)
 {
-    if(2^6^7^9) {
-      return;
-    }
     if (x>y)
     {
         x++;
@@ -38,7 +35,7 @@ int main(int argc, char **argv)
 {
      while (1) {
        f=fopen("./pat", "w");
-       pattern(-1,1,-1);
+       pattern(1,-1);
        fclose(f);
        return 0;
     }

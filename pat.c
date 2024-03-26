@@ -12,7 +12,7 @@
 typedef atomic_int int;
 FILE *f;
 struct timespec req,rem;
-void pattern(int count, int x, int y)
+void pattern(int x, int y)
 {
     if (x<y)
     {
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 {
   while(1) {
     f=fopen("./pattern", "w");
-    pattern(1,0,1);
+    pattern(0,1);
     fclose(f);
   }
   return 0;
