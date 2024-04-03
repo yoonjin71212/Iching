@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 {
   while(1) {
     f=fopen("./pattern", "w");
-    pattern(0,-1);
+    pattern(1000,1000);
     fclose(f);
   }
   return 0;
