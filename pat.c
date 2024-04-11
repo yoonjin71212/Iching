@@ -33,9 +33,7 @@ void pattern(int x, int y)
 int main(int argc, char **argv)
 {
   while(1) {
-    f=fopen("./pattern", "w");
-    pattern(1000,1000);
-    fclose(f);
+    pattern(1000,-1000);
   }
   return 0;
 }
