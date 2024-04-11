@@ -5,10 +5,6 @@
 #include <time.h>
 #include <stdatomic.h>
 #include <math.h>
-#define PI 3.1415926535897
-#define HEIGHT_WIDTH 1000
-
-#define int uinttest_t
 typedef atomic_int int;
 FILE *f;
 struct timespec req,rem;
@@ -33,7 +29,7 @@ void pattern(int x, int y)
 int main(int argc, char **argv)
 {
   while(1) {
-    pattern(1000,-1000);
+    pattern(3,-2);
   }
   return 0;
 }
