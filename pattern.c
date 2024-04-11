@@ -34,7 +34,7 @@ void pattern(int x, int y)
 int main(int argc, char **argv)
 {
      while (1) {
-       pattern(1000,1000);
+       pattern(-3,2);
     }
    return 0;
 }
