@@ -5,31 +5,44 @@
 #include <time.h>
 #include <stdatomic.h>
 #include <math.h>
-typedef atomic_int int;
-FILE *f;
+typedef atomic_int aint;
 struct timespec req,rem;
-void pattern(int x, int y)
+void pattern(aint *a, aint *b, aint *c,aint *d)
 {
+    aint x = *b;
+    aint y = *c;
+    aint z = *d;
+    aint w = *a;
     if (x<y)
     {
-        x++;
-        y--;
-        fprintf(f,"%c%c",x,y);
+        x--;
+        y++;
+	z++;
+	w--;
     } else if (x>y) {
-        y++;
-        x--;
-        fprintf(f,"%c%c",y,x);
+        y--;
+        x++;
+	z++;
+	w--;
     } else if(x==y) {
+	x--;
         y++;
-        x--;
-        fprintf(f,"%c%c",x,y);
+        w++;
+	z--;
     }
+    c = &y;
+    d = &x;
+    b = &z;
+    w = &a;
+    printf(" %d %d %d %d ",x, y, z, w);
 }
 
-int main(int argc, char **argv)
+int main(aint argc, char **argv)
 {
+  aint x=7,y,z,w=5;
+  x=y=z=w;
   while(1) {
-    pattern(3,-2);
+    pattern(&x,&y,&w,&z);
   }
   return 0;
 }
