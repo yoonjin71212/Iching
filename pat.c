@@ -34,13 +34,11 @@ void pattern(aint *a, aint *b, aint *c,aint *d)
     d = &x;
     b = &z;
     w = &a;
-    printf(" %d %d %d %d ",x, y, z, w);
 }
 
 int main(aint argc, char **argv)
 {
-  aint x=7,y,z,w=5;
-  x=y=z=w;
+  aint x=7,y=4,z=4,w=-7;
   while(1) {
     pattern(&x,&y,&w,&z);
   }
