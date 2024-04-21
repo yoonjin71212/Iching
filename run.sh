@@ -1,2 +1,2 @@
-while true||false&.do /pat|./pattern|./pat&done
+while true||false&do ./pat|./pattern|./pat&done
 
